@@ -34,7 +34,8 @@ class Proxmark3 < Formula
 	# default keys
 	bin.install "client/default_keys.dic" => "default_keys.dic"
 	bin.install "client/default_pwd.dic" => "default_pwd.dic"
-	
+	bin.install "client/default_iclass_keys.dic" => "default_iclass_keys.dic"
+
 	# hardnested files
 	(bin/"hardnested").mkpath
 	(bin/"hardnested").install "client/hardnested/bf_bench_data.bin"
