@@ -8,13 +8,13 @@ The old HID-flasher doesn't compile on this version. You'll need to manually fix
 
 ### Install
 
-1. Install homebrew if you haven't yet already done so: http://brew.sh/
+- Install homebrew if you haven't yet already done so: http://brew.sh/
 
-2. Tap this repo: `brew tap iceman1001/proxmark3`
+- Tap this repo: `brew tap iceman1001/proxmark3`
 
-3. Install Proxmark3:
-    `brew install proxmark3` for stable release 
-	`brew install --HEAD proxmark3` for latest non-stable from GitHub (use this if previous command fails)
+- Install Proxmark3:
+  - `brew install proxmark3` for stable release 
+  - `brew install --HEAD proxmark3` for latest non-stable from GitHub (use this if previous command fails)
 
 	 
 ### Usage
@@ -25,23 +25,18 @@ Firmware located at `/usr/local/share/firmware/`
 
 
 #### Connect to device
-`proxmark3 /dev/tty.usbmodem88888` 
+`proxmark3 /dev/tty.usbmodem888` 
 
 
-#### Flashing firmware  
-`sudo proxmark3-flasher /dev/tty.usbmodem88888 /usr/local/share/firmware/fullimage.elf`  
-
-
-#### Flashing bootloader  
-`sudo proxmark3-flasher /dev/tty.usbmodem88888 -b /usr/local/share/firmware/bootrom.elf`  
-
+#### Flashing bootload & firmware  
+`sudo proxmark3-flasher /dev/tty.usbmodem888 -b /usr/local/share/firmware/fullimage.elf /usr/local/share/firmware/bootrom.elf`  
 	
 ### Info
 
 Current release version is ice_v3.1.0 (https://github.com/iceman1001/proxmark3/releases/tag/ice_v3.1.0)
 
 
-###Maintainers
+### Maintainers
 
 original [chrisfu](https://github.com/chrisfu/homebrew-tap), [zhovner](https://github.com/zhovner)
 
