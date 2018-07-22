@@ -34,7 +34,9 @@ class Proxmark3 < Formula
 	# default keys
 	bin.install "client/default_keys.dic" => "default_keys.dic"
 	bin.install "client/default_pwd.dic" => "default_pwd.dic"
-	bin.install "client/default_iclass_keys.dic" => "default_iclass_keys.dic"
+	if File.exiss?("client/default_iclass_keys.dic") then
+		bin.install "client/default_iclass_keys.dic" => "default_iclass_keys.dic"
+	end
 
 	# hardnested files
 	(bin/"hardnested").mkpath
@@ -54,9 +56,11 @@ class Proxmark3 < Formula
 	(bin/"traces").install Dir["traces/*"]
 
 	# emv public keys file
-	(bin/"emv").mkpath
-#	(bin/"emv").install "client/emv/capk.txt"
-	
+	if File.exist?("client/emv/capk.txt") then
+		(bin/"emv").mkpath
+		(bin/"emv").install "client/emv/capk.txt"
+	end
+
 	# compiled firmware for flashing
 	share.mkpath	
 	(share/"firmware").mkpath
