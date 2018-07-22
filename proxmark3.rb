@@ -34,7 +34,7 @@ class Proxmark3 < Formula
 	# default keys
 	bin.install "client/default_keys.dic" => "default_keys.dic"
 	bin.install "client/default_pwd.dic" => "default_pwd.dic"
-	if File.exiss?("client/default_iclass_keys.dic") then
+	if File.exist?("client/default_iclass_keys.dic") then
 		bin.install "client/default_iclass_keys.dic" => "default_iclass_keys.dic"
 	end
 
